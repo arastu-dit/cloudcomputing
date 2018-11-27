@@ -61,8 +61,8 @@ def queues_create():
 	"""
 	Crete queue
 
-	curl -X POST -H 'Content-Type: application/json' http://localhost:5000/queues -d '{"name": "C13730921"}'
-	curl -X POST -H 'Content-Type: application/json' amazonServer:8080/queues -d '{"name": "C13730921"}'	
+	curl -X POST -H 'Content-Type: application/json' http://localhost:5000/queues -d '{"name": "D13123887"}'
+	curl -X POST -H 'Content-Type: application/json' amazonServer:8080/queues -d '{"name": "D13123887"}'	
 	
 	"""
 
@@ -78,8 +78,8 @@ def queues_remove(name):
 	"""
 	Delete queue
 
-	curl -X DELETE -H 'Accept: application/json' http://localhost:5000/queues/C13730921
-	curl -X DELETE -H 'Accept: application/json' amazonServer:8080/queues/C13730921
+	curl -X DELETE -H 'Accept: application/json' http://localhost:5000/queues/D13123887
+	curl -X DELETE -H 'Accept: application/json' amazonServer:8080/queues/D13123887
 	
 	"""
 
@@ -95,8 +95,8 @@ def messages_count(name):
 	"""
 	Get message count for queue
 
-	curl -X GET -H 'Accept: application/json' http://localhost:5000/queues/C13730921/msgs/count
-	curl -X GET -H 'Accept: application/json' amazonServer:8080/queues/C13730921/msgs/count
+	curl -X GET -H 'Accept: application/json' http://localhost:5000/queues/D13123887/msgs/count
+	curl -X GET -H 'Accept: application/json' amazonServer:8080/queues/D13123887/msgs/count
 	"""
 
 	conn = get_conn()
@@ -111,8 +111,8 @@ def messages_write(name):
 	"""
 	Writee message to queue
 
-	curl -s -X POST -H 'Accept: application/json' http://localhost:5000/queues/C13730921/msgs -d '{"content": "Hello World!"}' 
-	curl -s -X POST -H 'Accept: application/json' amazonServer:8080/queues/C13730921/msgs -d '{"content": "Hello World!"}'
+	curl -s -X POST -H 'Accept: application/json' http://localhost:5000/queues/D13123887/msgs -d '{"content": "Hello World!"}' 
+	curl -s -X POST -H 'Accept: application/json' amazonServer:8080/queues/D13123887/msgs -d '{"content": "Hello World!"}'
 	"""
 
 	body = request.get_json(force=True)
@@ -134,8 +134,8 @@ def messages_read(name):
 	"""
 	Get message from queue
 
-	curl -X GET -H 'Accept: application/json' http://localhost:5000/queues/C13730921/msgs
-	curl -X GET -H 'Accept: application/json' amazonServer:8080/queues/C13730921/msgs
+	curl -X GET -H 'Accept: application/json' http://localhost:5000/queues/D13123887/msgs
+	curl -X GET -H 'Accept: application/json' amazonServer:8080/queues/D13123887/msgs
 	"""
 
 	conn = get_conn()
@@ -153,8 +153,8 @@ def messages_consume(name):
 	"""
 	Consume message from queue
 
-	curl -X DELETE -H 'Accept: application/json' http://localhost:5000/queues/C13730921/msgs
-	curl -X DELETE -H 'Accept: application/json' amazonServer:8080/queues/C13730921/msgs
+	curl -X DELETE -H 'Accept: application/json' http://localhost:5000/queues/D13123887/msgs
+	curl -X DELETE -H 'Accept: application/json' amazonServer:8080/queues/D13123887/msgs
 	"""
 
 	conn = get_conn()
